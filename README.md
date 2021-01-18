@@ -9,3 +9,8 @@ Netflix clone using HTML, CSS and JavaScript
 <p align="center">
   <img src="https://user-images.githubusercontent.com/56271517/104933383-99292680-5987-11eb-9e20-7754a4c84151.png">
 </p>
+
+
+
+
+<i>(me contrata netflix)</i>
