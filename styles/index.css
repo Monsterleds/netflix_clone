@@ -1,0 +1,271 @@
+:root {
+  --textColor: #f3f3f3;
+  --linkOptions: #f3f3f3;
+  --buttonBG: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body, button {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-smooth: antialiased;
+}
+
+body > .container {
+  background: url("../assets/grande_homem2.jpg") no-repeat center;
+  background-size: cover;
+  padding: 0 48px;
+  min-height: 100vh;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header a + a {
+  margin-left: 20px;
+}
+
+.logo {
+  max-width: 140px;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+.logo:hover {
+  filter: brightness(80%);
+}
+
+header a {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--linkOptions);
+  opacity: 80%;
+  transition: 0.2s;
+}
+
+header a:hover {
+  opacity: 100%;
+}
+
+.header_links a:first-of-type {
+  opacity: 100%;
+  font-weight: bold;
+}
+
+.search_link img {
+  width: auto;
+  height: 24px;
+  filter: brightness(300%);
+}
+
+.bell_link img {
+  width: auto;
+  height: 28px;
+  filter: invert();
+}
+
+.gift_link img {
+  width: auto;
+  height: 20px;
+  filter: invert();
+}
+
+.profile {
+  margin-left: 16px;
+  transition: 0.2s;
+  opacity: 80%;
+}
+
+.profile:hover {
+  opacity: 100%;
+}
+
+.picture_circle {
+  border-radius: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.picture_circle img {
+  width: auto;
+  height: 40px;
+}
+
+.arrow_down {
+  width: 0;
+  height: 0;
+  border-left: solid 6px transparent;
+  border-right: solid 6px transparent;
+  border-top: solid 8px #fff;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.bar {
+  display: none;
+}
+
+main {
+  height: 80vh;
+}
+
+.principal_movie {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+
+.netflix_movie {
+  display: flex;
+  align-items: center;
+}
+
+.netflix_movie img {
+  width: auto;
+  height: 18px;
+}
+
+.netflix_movie span {
+  color: rgb(216, 216, 216);
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+.movie_logo {
+  position: relative;
+  height: auto;
+  max-width: 280px;
+  width: 100%;
+  right: 17px;
+  margin-top: 4px;
+}
+
+.buttons_showcase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 400px;
+  width: 100%;
+}
+
+.buttons_showcase button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: 0;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 30px;
+  background-color: #790000;
+  opacity: 60%;
+  color: var(--textColor);
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: solid 10px transparent;
+  border-bottom: solid 10px transparent;
+  border-left: solid 20px var(--textColor);
+  border-radius: 3px;
+  margin-right: 16px;
+}
+
+.buttons_showcase button:last-of-type {
+  background-color: rgb(153, 153, 153);
+  color: var(--textColor);
+}
+
+.buttons_showcase button:hover {
+  opacity: 100%;
+}
+
+.info-icon {
+  width: auto;
+  height: 20px;
+  margin-right: 12px;
+  filter: invert();
+}
+.carousel_box_movies {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.carousel_box_movies:hover {
+  filter: brightness(40%);
+}
+
+@media only screen and (max-width: 945px) {
+  .header_links > a, .header_profile {
+    display: none;
+  }
+
+  .bar {
+    position: relative;
+    display: flex;
+    width: 26px;
+    height: 3px;
+    background-color: rgb(212, 212, 212);
+    border-radius: 16px;
+    cursor: pointer;
+  }
+
+  .bar::before {
+    position: absolute;
+    content: '';
+    display: flex;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(212, 212, 212);
+    margin-top: 12px;
+    border-radius: 16px;
+  }
+
+  .bar::after {
+    position: absolute;
+    content: '';
+    display: flex;
+    width: 100%;
+    height: 3px;
+    margin-top: 24px;
+    border-radius: 16px;
+    background-color: rgb(212, 212, 212);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .principal_movie {
+    align-items: center;
+  }
+
+  .buttons_showcase button {
+    width: 100%;
+  }
+}
